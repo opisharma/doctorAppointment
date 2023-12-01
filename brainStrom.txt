@@ -1,0 +1,18 @@
+
+
+select
+update
+delete
+where condition
+joining - natural joining
+like
+foregin key
+primary key
+order by
+desc aec
+count
+
+
+
+
+
