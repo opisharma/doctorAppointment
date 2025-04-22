@@ -100,10 +100,8 @@
                             echo "<td>{$appointment['AppointmentTime']}</td>";
                     
                             echo "<td>";
-                            echo "<a href='update.php?id={$appointment['AppointmentID']}'><i class='fas fa-edit' title='Edit'></i></a>";
-                            echo "&nbsp;&nbsp;";
-                            echo "&nbsp;&nbsp;";
-                            echo "<a href='delete.php?id={$appointment['AppointmentID']}'><i class='fas fa-trash-alt' title='Delete'></i></a>";
+                            echo "<a href='update.php?id={$appointment['AppointmentID']}' class='fas fa-edit' style='color: #4CAF50; text-decoration: none;'>Edit</a>";
+                            echo "<a href='delete.php?id={$appointment['AppointmentID']}' class='fas fa-trash-alt' style='color: #F44336; text-decoration: none;'>Delete</a>";
                             echo "</td>";
                             echo "</tr>";
                         }
@@ -135,8 +133,8 @@
                         echo "<td>{$appointment['AppointmentTime']}</td>";
                 
                         echo "<td>";
-                        echo "<a href='update.php?id={$appointment['AppointmentID']}'><i class='fas fa-edit' title='Edit'></i></a>";
-                        echo "<a href='delete.php?id={$appointment['AppointmentID']}'><i class='fas fa-trash-alt' title='Delete'></i></a>";
+                        echo "<a href='update.php?id={$appointment['AppointmentID']}' class='fas fa-edit' style='color: #4CAF50; text-decoration: none;'>Edit</a>";
+                        echo "<a href='delete.php?id={$appointment['AppointmentID']}' class='fas fa-trash-alt' style='color: #F44336; text-decoration: none;'>Delete</a>";
                         echo "<a href='print.php?id={$appointment['AppointmentID']}'><i class='fa-solid fa-print'></i></a>";
                         echo "</td>";
                         echo "</tr>";

@@ -44,12 +44,12 @@
             ?>
             <header>Login</header>
             <form action="" method="post">
-                <div class="field input">
+                <div style="margin-right:15px;" class="field input">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" autocomplete="off" required>
                 </div>
 
-                <div class="field input">
+                <div style="margin-right: 15px;" class="field input">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" autocomplete="off" required>
                 </div>

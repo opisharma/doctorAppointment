@@ -56,29 +56,31 @@
             <header>Create An Appointment</header>
 
             <form action="" method="post">
-                <div class="field input">
+                <div style="margin-right: 15px;" class="field input">
                     <label for="username">Patient Name</label>
                     <input type="text" name="patientName" id="username" autocomplete="off" required>
                 </div>
-                <div class="field input">
+                <div style="margin-right: 15px;" class="field input">
                     <label for="username">Patient Phone</label>
                     <input type="text" name="phone" id="username" autocomplete="off" required>
                 </div>
 
-                <div class="field input">
-                    <label for="doctor">Doctor Name</label>
-                    <select name="DoctorName" id="doctor" required>
-                        <option value="">Select Doctor</option>
+                <div class="field input" style="margin-right: 15px; display: flex; flex-direction: column;">
+                    <label for="doctor" style="font-weight: bold; margin-bottom: 5px;">Doctor Name</label>
+                    <select name="DoctorName" id="doctor" required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                        <option value="" disabled selected>Select Doctor</option>
                         <?php foreach ($doctors as $doctor) { ?>
-                            <option value="<?php echo $doctor['DoctorID']; ?>"><?php echo $doctor['Name'] . '-' .$doctor['Specialization']; ?></option>
+                            <option value="<?php echo $doctor['DoctorID']; ?>">
+                                <?php echo $doctor['Name'] . ' - ' . $doctor['Specialization']; ?>
+                            </option>
                         <?php } ?>
                     </select>
                 </div>
-                <div class="field input">
+                <div style="margin-right: 15px;" class="field input">
                     <label for="date">Date</label>
                     <input type="date" name="Date" id="date"  required>
                 </div>
-                <div class="field input">
+                <div style="margin-right: 15px;" class="field input">
                     <label for="">Time</label>
                     <input type="time" name="time" id="datetime" autocomplete="off" required>
                 </div>
