@@ -25,7 +25,7 @@
 
             
                 
-                $data = mysqli_query($con,"SELECT AppointmentDate,DoctorID FROM Appointments WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
+                $data = mysqli_query($con,"SELECT AppointmentDate,DoctorID FROM appointments WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
                 $data = mysqli_fetch_assoc($data);
 
                 $oldDate = $data['AppointmentDate'];
@@ -44,10 +44,10 @@
                         echo "<a href='home.php'><button class='btn'>Go Home</button>";
                         exit();
                     }
-                    mysqli_query($con,"UPDATE Appointments SET patientName = '$username', PatientPhone = '$phone',DoctorID = '$doctor', serialNo = '$serialNo', AppointmentDate = '$date', AppointmentTime = '$time' WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
+                    mysqli_query($con,"UPDATE appointments SET patientName = '$username', PatientPhone = '$phone',DoctorID = '$doctor', serialNo = '$serialNo', AppointmentDate = '$date', AppointmentTime = '$time' WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
 
                 }else{
-                    mysqli_query($con,"UPDATE Appointments SET patientName = '$username',PatientPhone = '$phone',DoctorID = '$doctor', AppointmentDate = '$date', AppointmentTime = '$time' WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
+                    mysqli_query($con,"UPDATE appointments SET patientName = '$username',PatientPhone = '$phone',DoctorID = '$doctor', AppointmentDate = '$date', AppointmentTime = '$time' WHERE AppointmentID = '$appointmentID'") or die("Erroe Occured");
 
                 }
 
@@ -69,7 +69,7 @@
             A.AppointmentDate,
             A.AppointmentTime
         FROM 
-            Appointments A
+            appointments A
         JOIN 
             Doctors D ON A.DoctorID = D.DoctorID 
         Where A.AppointmentID = $id;");

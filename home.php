@@ -82,7 +82,7 @@
                         A.AppointmentDate,
                         A.AppointmentTime
                     FROM
-                        Appointments A
+                        appointments A
                     JOIN
                         Doctors D ON A.DoctorID = D.DoctorID
                     WHERE
@@ -119,9 +119,9 @@
                     A.AppointmentDate,
                     A.AppointmentTime
                 FROM 
-                    Appointments A
+                    appointments A
                 JOIN 
-                    Doctors D ON A.DoctorID = D.DoctorID;");
+                    doctors D ON A.DoctorID = D.DoctorID;");
                     $appointments = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
                     foreach ($appointments as $appointment) {

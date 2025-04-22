@@ -48,7 +48,7 @@
          
 
          }else{
-            $query = mysqli_query($con, "SELECT DoctorID, Name,Specialization FROM Doctors");
+            $query = mysqli_query($con, "SELECT DoctorID, Name,Specialization FROM doctors");
             $doctors = mysqli_fetch_all($query, MYSQLI_ASSOC);
          
         ?>
