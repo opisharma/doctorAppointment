@@ -133,9 +133,11 @@
                         echo "<td>{$appointment['AppointmentTime']}</td>";
                 
                         echo "<td>";
-                        echo "<a href='update.php?id={$appointment['AppointmentID']}' class='fas fa-edit' style='color: #4CAF50; text-decoration: none;'>Edit</a>";
-                        echo "<a href='delete.php?id={$appointment['AppointmentID']}' class='fas fa-trash-alt' style='color: #F44336; text-decoration: none;'>Delete</a>";
-                        echo "<a href='print.php?id={$appointment['AppointmentID']}'><i class='fa-solid fa-print'></i></a>";
+                        // echo "<a href='update.php?id={$appointment['AppointmentID']}' class='fas fa-edit' style='color: #4CAF50; text-decoration: none;'>Edit</a>";
+                        echo "<a href='update.php?id={$appointment['AppointmentID']}' class='btn btn-primary'><i class='fa-solid fa-pen-to-square'></i></a>";
+                        // echo "<a href='delete.php?id={$appointment['AppointmentID']}' class='fas fa-trash-alt' style='color: #F44336; text-decoration: none;'>Delete</a>";
+                        echo "<a href='delete.php?id={$appointment['AppointmentID']}'><i class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this appointment?\");'><i class='fa-solid fa-trash'></i></a>";
+                        // echo "<a href='print.php?id={$appointment['AppointmentID']}'><i class='fa-solid fa-print'></i></a>";
                         echo "</td>";
                         echo "</tr>";
                     }
